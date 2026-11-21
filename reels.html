@@ -1,10 +1,53 @@
 <!DOCTYPE html>
-<html><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><title>Badman - Reels</title>
-<style>*{margin:0;padding:0;box-sizing:border-box;font-family:Arial}body{display:flex}.side{width:220px;border-right:1px solid #ddd;height:100vh;padding:20px;position:fixed}.side h1{font-family:cursive}.side a{display:block;text-decoration:none;color:#000;padding:10px;font-weight:600}.side a.active{background:#eee}.main{margin-left:220px;flex:1;padding:20px;text-align:center}.reel{width:320px;height:550px;background:#000;color:#fff;border-radius:15px;margin:0 auto;display:flex;align-items:center;justify-content:center;font-size:22px;font-weight:900}</style></head>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Badman - Reels</title>
+<style>
+body{margin:0;font-family:Arial;background:#fff;color:#000;display:flex}
+.side{width:180px;padding:20px;border-right:1px solid #ddd;height:100vh}
+.side h1{font-family:cursive;font-style:italic}
+.side a{display:block;color:#000;text-decoration:none;padding:12px 0;font-size:18px}
+.side a.active{background:#eee;font-weight:bold}
+.main{flex:1;padding:20px;text-align:center}
+.reel-box{width:100%;max-width:420px;margin:0 auto;background:#000;border-radius:12px;overflow:hidden;animation:fadeUp 0.8s ease}
+@keyframes fadeUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+video{width:100%;display:block}
+.reel-text{color:#fff;padding:15px;font-weight:bold}
+.like-btn{background:#e0245e;color:#fff;border:none;padding:10px 22px;border-radius:20px;font-weight:bold}
+.share-btn{background:#fff;border:1px solid #333;padding:10px 22px;border-radius:20px}
+@media(max-width:700px){.side{width:110px;padding:10px}.side a{font-size:15px}}
+</style>
+</head>
 <body>
-<div class="side"><h1>Badman</h1><a href="index.html">Home</a><a href="search.html">Search</a><a href="explore.html">Explore</a><a href="reels.html" class="active">Reels</a><a href="messages.html">Messages</a><a href="notifications.html">Notifications</a><a href="create.html">Create</a><a href="profile.html">Profile</a></div>
-<div class="main"><h2>Reels</h2><br><div class="reel">🎬 BADMAN REEL<br><br>MUGENYI MARK</div><br><button onclick="alert('❤️ Liked!')" style="padding:12px 25px;border-radius:20px;border:none;background:#ff3040;color:#fff;font-weight:900">❤️ Like</button> <button onclick="alert('Shared!')" style="padding:12px 25px;border-radius:20px">Share</button></div>
-<video autoplay muted loop playsinline style="width:100%; border-radius:12px;">
-  <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+<div class="side">
+<h1>Badman</h1>
+<a href="index.html">Home</a>
+<a href="search.html">Search</a>
+<a href="explore.html">Explore</a>
+<a href="reels.html" class="active">Reels</a>
+<a href="messages.html">Messages</a>
+<a href="notifications.html">Notifications</a>
+<a href="create.html">Create</a>
+<a href="profile.html">Profile</a>
+</div>
+
+<div class="main">
+<h2>Reels</h2>
+
+<div class="reel-box">
+<!-- VIDEO - REPLACES BLACK IMAGE -->
+<video autoplay muted loop playsinline>
+<source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
 </video>
-</body></html>
+<div class="reel-text">🎬 BADMAN REEL<br><br>MUGENYI MARK</div>
+</div>
+
+<br>
+<button class="like-btn">❤️ Like</button>
+<button class="share-btn">Share</button>
+
+<p style="color:#888;margin-top:30px">© 2026 MUGENYI MARK</p>
+</div>
+</body>
+</html>
