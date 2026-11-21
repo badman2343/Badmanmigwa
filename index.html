@@ -1,22 +1,84 @@
 <!DOCTYPE html>
-<html><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Badman - Home</title>
-<style>*{margin:0;padding:0;box-sizing:border-box;font-family:Arial}body{display:flex} .side{width:220px;border-right:1px solid #ddd;height:100vh;padding:20px;position:fixed;background:#fff} .side h1{font-family:cursive;font-size:28px;margin-bottom:20px} .side a{display:block;text-decoration:none;color:#000;padding:10px;font-weight:600;border-radius:8px} .side a:hover,.side a.active{background:#eee} .main{margin-left:220px;flex:1;padding:20px} .stories{display:flex;gap:15px;margin-bottom:20px} .story{text-align:center;font-size:12px} .circle{width:60px;height:60px;border-radius:50%;background:linear-gradient(45deg,#feda75,#fa7e1e,#d62976,#962fbf,#4f5bd5);display:flex;align-items:center;justify-content:center;color:#fff;font-weight:900} .post{max-width:500px;margin:0 auto;border:1px solid #ddd;border-radius:10px;padding:12px;margin-bottom:20px} .post img{width:100%;height:350px;object-fit:cover;border-radius:10px} .post h3{margin:10px 0 5px} footer{text-align:center;padding:15px;background:#000;color:#fff;margin-top:20px} @media(max-width:700px){.side{width:70px}.side h1{font-size:16px}.side a{font-size:0}.side a::after{content:attr(data-icon);font-size:20px}.main{margin-left:70px}}</style></head>
+<style>
+body{margin:0;font-family:Arial;background:#fff;color:#000;display:flex}
+.side{width:90px;padding:10px;border-right:1px solid #ddd;text-align:center}
+.side h1{font-family:cursive;font-style:italic;font-size:18px;text-align:left}
+.side a{display:block;font-size:26px;padding:12px 0;text-decoration:none}
+.side p{font-size:10px;text-align:left;font-weight:bold}
+.main{flex:1;padding:15px;max-width:520px;margin:0 auto}
+.stories{display:flex;gap:12px;overflow-x:auto;padding:5px 0}
+.story{text-align:center;font-size:12px;flex-shrink:0}
+.circle{width:60px;height:60px;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:bold;font-size:22px;animation:storyPulse 2s infinite}
+@keyframes storyPulse{0%{transform:scale(1)}50%{transform:scale(1.08)}100%{transform:scale(1)}}
+.post{border:1px solid #ddd;border-radius:10px;padding:12px;margin:20px 0;animation:fadeUp 0.8s ease}
+@keyframes fadeUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+.post img{width:100%;border-radius:10px}
+.post video{width:100%;border-radius:10px;background:#000}
+.post b{font-size:18px}
+.like{font-size:16px;margin-top:8px}
+a{color:#0095f6;text-decoration:none}
+@media(max-width:700px){.side{width:55px}.side h1{font-size:14px}}
+</style>
+</head>
 <body>
-<div class="side"><h1>Badman</h1>
-<a href="index.html" class="active" data-icon="🏠">Home</a>
-<a href="search.html" data-icon="🔍">Search</a>
-<a href="explore.html" data-icon="🧭">Explore</a>
-<a href="reels.html" data-icon="🎬">Reels</a>
-<a href="messages.html" data-icon="💬">Messages</a>
-<a href="notifications.html" data-icon="❤️">Notifications</a>
-<a href="create.html" data-icon="➕">Create</a>
-<a href="profile.html" data-icon="👤">Profile</a>
-<p style="margin-top:20px;font-size:12px">MUGENYI MARK<br>markmaron2343@gmail.com<br>0748162472</p></div>
-<div class="main">
-<div class="stories"><div class="story"><div class="circle">A</div>Faith</div><div class="story"><div class="circle">J</div>arnold</div><div class="story"><div class="circle">M</div>maria</div><div class="story"><div class="circle">D</div>sam</div><div class="story"><div class="circle">S</div>David</div></div>
-<div class="post"><h3>@creative_user</h3><img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600"><p>♥ 2,450 likes</p><p><b>@creative_user</b> Enjoying every moment!</p><a href="profile.html">View Profile</a></div>
-<div class="post"><h3>@badman_official</h3><img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?w=600"><p>♥ 5,120 likes</p><p><b>@badman_official</b> Badman Forever - MUGENYI MARK</p></div>
+<div class="side">
+<h1>Badman</h1>
+<a href="index.html">🏠</a>
+<a href="search.html">🔍</a>
+<a href="explore.html">🧭</a>
+<a href="reels.html">🎬</a>
+<a href="messages.html">💬</a>
+<a href="notifications.html">❤️</a>
+<a href="create.html">➕</a>
+<a href="profile.html">👤</a>
+<p>MUGENYI<br>MARK<br>markmaron2343@gmail.com<br>0748162472</p>
 </div>
-<footer><b>BADMAN by MUGENYI MARK</b><br>markmaron2343@gmail.com | 0748162472</footer>
-</body></html>
+
+<div class="main">
+<!-- STORIES -->
+<div class="stories">
+<div class="story"><div class="circle" style="background:#ff0055">A</div>Faith</div>
+<div class="story"><div class="circle" style="background:#ffaa00">J</div>arnold</div>
+<div class="story"><div class="circle" style="background:#ff00aa">M</div>maria</div>
+<div class="story"><div class="circle" style="background:#aa00ff">D</div>sam</div>
+<div class="story"><div class="circle" style="background:#ff5500">S</div>David</div>
+<div class="story"><div class="circle" style="background:#00aa55">M</div>mark</div>
+</div>
+
+<!-- VIDEO POST - NEW ON HOME PAGE -->
+<div class="post">
+<b>@badman_official</b>
+<video autoplay muted loop playsinline controls>
+<source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+</video>
+<div class="like">❤️ 3,120 likes</div>
+<p><b>@badman_official</b> My first movie on Badman! 🎬 Playing automatically!</p>
+<a href="profile.html">View Profile</a>
+</div>
+
+<!-- POST 1 - SAME AS YOUR SCREENSHOT -->
+<div class="post">
+<b>@creative_user</b>
+<img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600">
+<div class="like">❤️ 2,450 likes</div>
+<p><b>@creative_user</b> Enjoying every moment!</p>
+<a href="profile.html">View Profile</a>
+</div>
+
+<!-- POST 2 - SAME AS YOUR SCREENSHOT -->
+<div class="post">
+<b>@badman_official</b>
+<img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?w=600">
+<div class="like">❤️ 1,890 likes</div>
+<p><b>@badman_official</b> Mbale vibes 😎</p>
+<a href="profile.html">View Profile</a>
+</div>
+
+<p style="text-align:center;color:#888">© 2026 MUGENYI MARK - markmaron2343@gmail.com - 0748162472</p>
+</div>
+</body>
+</html>
