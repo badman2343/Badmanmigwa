@@ -1,0 +1,8 @@
+<!DOCTYPE html>
+<html><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><title>Badman - Messages</title>
+<style>*{margin:0;padding:0;box-sizing:border-box;font-family:Arial}body{display:flex}.side{width:220px;border-right:1px solid #ddd;height:100vh;padding:20px;position:fixed}.side h1{font-family:cursive}.side a{display:block;text-decoration:none;color:#000;padding:10px;font-weight:600}.side a.active{background:#eee}.main{margin-left:220px;flex:1;padding:20px}.chat{background:#f5f5f5;padding:15px;border-radius:10px;margin:10px 0}.me{background:#dcf8c6;text-align:right}</style></head>
+<body>
+<div class="side"><h1>Badman</h1><a href="index.html">Home</a><a href="search.html">Search</a><a href="explore.html">Explore</a><a href="reels.html">Reels</a><a href="messages.html" class="active">Messages</a><a href="notifications.html">Notifications</a><a href="create.html">Create</a><a href="profile.html">Profile</a></div>
+<div class="main"><h2>Messages - MUGENYI MARK</h2><div class="chat">Alex: Hello Badman!</div><div class="chat me">Me: Hello, Me with Badman Forever!</div><input id="msg" placeholder="Type message..." style="width:80%;padding:12px;border-radius:10px;border:1px solid #ddd"><button onclick="send()" style="padding:12px 20px;background:#000;color:#fff;border-radius:10px">Send</button><div id="box"></div></div>
+<script>function send(){let v=document.getElementById('msg').value;if(!v)return;document.getElementById('box').innerHTML+='<div class="chat me">Me: '+v+'</div>';document.getElementById('msg').value=''}</script>
+</body></html>
